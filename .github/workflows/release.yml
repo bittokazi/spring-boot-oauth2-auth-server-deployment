@@ -18,7 +18,7 @@ jobs:
         with:
           repository: bittokazi/spring-boot-oauth2-multi-tenant-auth-server
           ref: ${{ github.event.inputs.version }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.REPO_PAT }}
 
       - name: Log into registry registry.gitlab.com
         uses: docker/login-action@v3
