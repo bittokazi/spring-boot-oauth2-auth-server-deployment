@@ -28,4 +28,4 @@ jobs:
           password: ${{ secrets.GITLAB_REGISTRY_PASSWORD }}
 
       - name: Build and Push Java Backend Image
-        run: docker build -eDEPLOY_ENV=prod . --file ./Dockerfile --tag registry.gitlab.com/bittokazi/spring-boot-oauth2-multi-tenant-auth-server/backend:latest && docker push registry.gitlab.com/bittokazi/spring-boot-oauth2-multi-tenant-auth-server/backend:latest
+        run: docker build  --build-arg DEPLOY_ENV=prod . --file ./Dockerfile --tag registry.gitlab.com/bittokazi/spring-boot-oauth2-multi-tenant-auth-server/backend:latest && docker push registry.gitlab.com/bittokazi/spring-boot-oauth2-multi-tenant-auth-server/backend:latest
