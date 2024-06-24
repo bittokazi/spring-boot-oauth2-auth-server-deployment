@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Release branch/tag version (eg. refs/tags/*, refs/head/main)"
+        description: "Release branch/tag version (eg. refs/tags/*, refs/heads/main)"
         required: true
         default: "refs/tags"
 
